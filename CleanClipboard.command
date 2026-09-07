@@ -15,3 +15,6 @@ pbpaste | perl -0777 -pe '
 
 echo "Clipboard cleaned."
 sleep 0.5
+
+# Close this Terminal window (Terminal's default is to leave it open after exit).
+osascript -e 'tell application "Terminal" to close (every window whose name contains "CleanClipboard")' &
